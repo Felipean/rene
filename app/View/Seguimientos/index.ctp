@@ -3,6 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('proyecto_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('sede'); ?></th>
 			<th><?php echo $this->Paginator->sort('curso'); ?></th>
 			<th><?php echo $this->Paginator->sort('proyecto'); ?></th>
@@ -12,6 +13,9 @@
 	<?php foreach ($seguimientos as $seguimiento): ?>
 	<tr>
 		<td><?php echo h($seguimiento['Seguimiento']['id']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($seguimiento['Proyecto']['id'], array('controller' => 'proyectos', 'action' => 'view', $seguimiento['Proyecto']['id'])); ?>
+		</td>
 		<td><?php echo h($seguimiento['Seguimiento']['sede']); ?>&nbsp;</td>
 		<td><?php echo h($seguimiento['Seguimiento']['curso']); ?>&nbsp;</td>
 		<td><?php echo h($seguimiento['Seguimiento']['proyecto']); ?>&nbsp;</td>
@@ -42,5 +46,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Seguimiento'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Proyectos'), array('controller' => 'proyectos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Proyecto'), array('controller' => 'proyectos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

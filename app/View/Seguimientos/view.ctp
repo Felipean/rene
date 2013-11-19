@@ -6,6 +6,11 @@
 			<?php echo h($seguimiento['Seguimiento']['id']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Proyecto'); ?></dt>
+		<dd>
+			<?php echo $this->Html->link($seguimiento['Proyecto']['id'], array('controller' => 'proyectos', 'action' => 'view', $seguimiento['Proyecto']['id'])); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Sede'); ?></dt>
 		<dd>
 			<?php echo h($seguimiento['Seguimiento']['sede']); ?>
@@ -35,5 +40,7 @@
 		<li><?php echo $this->Form->postLink(__('Delete Seguimiento'), array('action' => 'delete', $seguimiento['Seguimiento']['id']), null, __('Are you sure you want to delete # %s?', $seguimiento['Seguimiento']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Seguimientos'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Seguimiento'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Proyectos'), array('controller' => 'proyectos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Proyecto'), array('controller' => 'proyectos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

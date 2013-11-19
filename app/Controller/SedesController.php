@@ -55,6 +55,8 @@ class SedesController extends AppController {
 				$this->Session->setFlash(__('The sede could not be saved. Please, try again.'));
 			}
 		}
+		$alunmos = $this->Sede->Alunmo->find('list');
+		$this->set(compact('alunmos'));
 	}
 
 /**
@@ -79,6 +81,8 @@ class SedesController extends AppController {
 			$options = array('conditions' => array('Sede.' . $this->Sede->primaryKey => $id));
 			$this->request->data = $this->Sede->find('first', $options);
 		}
+		$alunmos = $this->Sede->Alunmo->find('list');
+		$this->set(compact('alunmos'));
 	}
 
 /**
@@ -142,6 +146,8 @@ class SedesController extends AppController {
 				$this->Session->setFlash(__('The sede could not be saved. Please, try again.'));
 			}
 		}
+		$alunmos = $this->Sede->Alunmo->find('list');
+		$this->set(compact('alunmos'));
 	}
 
 /**
@@ -166,6 +172,8 @@ class SedesController extends AppController {
 			$options = array('conditions' => array('Sede.' . $this->Sede->primaryKey => $id));
 			$this->request->data = $this->Sede->find('first', $options);
 		}
+		$alunmos = $this->Sede->Alunmo->find('list');
+		$this->set(compact('alunmos'));
 	}
 
 /**

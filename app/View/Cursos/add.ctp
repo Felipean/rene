@@ -8,6 +8,8 @@
 		echo $this->Form->input('nrc');
 		echo $this->Form->input('sede');
 		echo $this->Form->input('periodo');
+		echo $this->Form->input('ip_profesor');
+		echo $this->Form->input('_alumno');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

@@ -1,7 +1,7 @@
 <div class="alumnos form">
 <?php echo $this->Form->create('Alumno'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Alumno'); ?></legend>
+		<legend><?php echo __('Admin Add Alumno'); ?></legend>
 	<?php
 		echo $this->Form->input('proyecto_id');
 		echo $this->Form->input('sede_id');

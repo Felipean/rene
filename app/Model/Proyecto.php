@@ -3,15 +3,11 @@ App::uses('AppModel', 'Model');
 /**
  * Proyecto Model
  *
+ * @property Alumno $Alumno
+ * @property Profesore $Profesore
+ * @property Seguimiento $Seguimiento
  */
 class Proyecto extends AppModel {
-
-/**
- * Use table
- *
- * @var mixed False or table name
- */
-	public $useTable = 'proyecto';
 
 /**
  * Validation rules
@@ -70,4 +66,54 @@ class Proyecto extends AppModel {
 			),
 		),
 	);
+
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'Alumno' => array(
+			'className' => 'Alumno',
+			'foreignKey' => 'proyecto_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'Profesore' => array(
+			'className' => 'Profesore',
+			'foreignKey' => 'proyecto_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'Seguimiento' => array(
+			'className' => 'Seguimiento',
+			'foreignKey' => 'proyecto_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
 }

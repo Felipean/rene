@@ -31,6 +31,16 @@
 			<?php echo h($curso['Curso']['periodo']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Ip Profesor'); ?></dt>
+		<dd>
+			<?php echo h($curso['Curso']['ip_profesor']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __(' Alumno'); ?></dt>
+		<dd>
+			<?php echo h($curso['Curso']['_alumno']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">

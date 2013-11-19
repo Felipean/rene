@@ -1,13 +1,12 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Sede Model
+ * Profesore Model
  *
- * @property Alunmo $Alunmo
- * @property Alumno $Alumno
- * @property Profesore $Profesore
+ * @property Sede $Sede
+ * @property Proyecto $Proyecto
  */
-class Sede extends AppModel {
+class Profesore extends AppModel {
 
 /**
  * Validation rules
@@ -25,7 +24,7 @@ class Sede extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'alunmo_id' => array(
+		'sede_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -35,7 +34,7 @@ class Sede extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'profesore_id' => array(
+		'proyecto_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -45,7 +44,7 @@ class Sede extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'sede' => array(
+		'nombre' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -55,9 +54,49 @@ class Sede extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'direccion' => array(
+		'apellido' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'rut' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'clave' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'sexo' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'edad' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -75,47 +114,19 @@ class Sede extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Alunmo' => array(
-			'className' => 'Alunmo',
-			'foreignKey' => 'alunmo_id',
+		'Sede' => array(
+			'className' => 'Sede',
+			'foreignKey' => 'sede_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Proyecto' => array(
+			'className' => 'Proyecto',
+			'foreignKey' => 'proyecto_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		)
 	);
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'Alumno' => array(
-			'className' => 'Alumno',
-			'foreignKey' => 'sede_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Profesore' => array(
-			'className' => 'Profesore',
-			'foreignKey' => 'sede_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

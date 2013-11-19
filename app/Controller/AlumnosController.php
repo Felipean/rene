@@ -55,6 +55,9 @@ class AlumnosController extends AppController {
 				$this->Session->setFlash(__('The alumno could not be saved. Please, try again.'));
 			}
 		}
+		$proyectos = $this->Alumno->Proyecto->find('list');
+		$sedes = $this->Alumno->Sede->find('list');
+		$this->set(compact('proyectos', 'sedes'));
 	}
 
 /**
@@ -79,6 +82,9 @@ class AlumnosController extends AppController {
 			$options = array('conditions' => array('Alumno.' . $this->Alumno->primaryKey => $id));
 			$this->request->data = $this->Alumno->find('first', $options);
 		}
+		$proyectos = $this->Alumno->Proyecto->find('list');
+		$sedes = $this->Alumno->Sede->find('list');
+		$this->set(compact('proyectos', 'sedes'));
 	}
 
 /**
@@ -142,6 +148,9 @@ class AlumnosController extends AppController {
 				$this->Session->setFlash(__('The alumno could not be saved. Please, try again.'));
 			}
 		}
+		$proyectos = $this->Alumno->Proyecto->find('list');
+		$sedes = $this->Alumno->Sede->find('list');
+		$this->set(compact('proyectos', 'sedes'));
 	}
 
 /**
@@ -166,6 +175,9 @@ class AlumnosController extends AppController {
 			$options = array('conditions' => array('Alumno.' . $this->Alumno->primaryKey => $id));
 			$this->request->data = $this->Alumno->find('first', $options);
 		}
+		$proyectos = $this->Alumno->Proyecto->find('list');
+		$sedes = $this->Alumno->Sede->find('list');
+		$this->set(compact('proyectos', 'sedes'));
 	}
 
 /**

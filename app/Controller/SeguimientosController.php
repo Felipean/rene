@@ -55,6 +55,8 @@ class SeguimientosController extends AppController {
 				$this->Session->setFlash(__('The seguimiento could not be saved. Please, try again.'));
 			}
 		}
+		$proyectos = $this->Seguimiento->Proyecto->find('list');
+		$this->set(compact('proyectos'));
 	}
 
 /**
@@ -79,6 +81,8 @@ class SeguimientosController extends AppController {
 			$options = array('conditions' => array('Seguimiento.' . $this->Seguimiento->primaryKey => $id));
 			$this->request->data = $this->Seguimiento->find('first', $options);
 		}
+		$proyectos = $this->Seguimiento->Proyecto->find('list');
+		$this->set(compact('proyectos'));
 	}
 
 /**
@@ -142,6 +146,8 @@ class SeguimientosController extends AppController {
 				$this->Session->setFlash(__('The seguimiento could not be saved. Please, try again.'));
 			}
 		}
+		$proyectos = $this->Seguimiento->Proyecto->find('list');
+		$this->set(compact('proyectos'));
 	}
 
 /**
@@ -166,6 +172,8 @@ class SeguimientosController extends AppController {
 			$options = array('conditions' => array('Seguimiento.' . $this->Seguimiento->primaryKey => $id));
 			$this->request->data = $this->Seguimiento->find('first', $options);
 		}
+		$proyectos = $this->Seguimiento->Proyecto->find('list');
+		$this->set(compact('proyectos'));
 	}
 
 /**

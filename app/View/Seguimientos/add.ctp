@@ -3,6 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Add Seguimiento'); ?></legend>
 	<?php
+		echo $this->Form->input('proyecto_id');
 		echo $this->Form->input('sede');
 		echo $this->Form->input('curso');
 		echo $this->Form->input('proyecto');
@@ -16,5 +17,7 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Seguimientos'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Proyectos'), array('controller' => 'proyectos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Proyecto'), array('controller' => 'proyectos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

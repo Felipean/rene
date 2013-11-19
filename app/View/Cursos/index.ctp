@@ -8,6 +8,8 @@
 			<th><?php echo $this->Paginator->sort('nrc'); ?></th>
 			<th><?php echo $this->Paginator->sort('sede'); ?></th>
 			<th><?php echo $this->Paginator->sort('periodo'); ?></th>
+			<th><?php echo $this->Paginator->sort('ip_profesor'); ?></th>
+			<th><?php echo $this->Paginator->sort('_alumno'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($cursos as $curso): ?>
@@ -18,6 +20,8 @@
 		<td><?php echo h($curso['Curso']['nrc']); ?>&nbsp;</td>
 		<td><?php echo h($curso['Curso']['sede']); ?>&nbsp;</td>
 		<td><?php echo h($curso['Curso']['periodo']); ?>&nbsp;</td>
+		<td><?php echo h($curso['Curso']['ip_profesor']); ?>&nbsp;</td>
+		<td><?php echo h($curso['Curso']['_alumno']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $curso['Curso']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $curso['Curso']['id'])); ?>

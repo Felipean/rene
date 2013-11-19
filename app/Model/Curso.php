@@ -7,13 +7,6 @@ App::uses('AppModel', 'Model');
 class Curso extends AppModel {
 
 /**
- * Use table
- *
- * @var mixed False or table name
- */
-	public $useTable = 'curso';
-
-/**
  * Validation rules
  *
  * @var array
@@ -72,6 +65,26 @@ class Curso extends AppModel {
 		'periodo' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'ip_profesor' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'_alumno' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
